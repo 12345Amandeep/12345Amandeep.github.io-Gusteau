@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Resturant.in</title>
+	<style>
+		body {
+			background-color: #111;
+			font-family: 'Architects Daughter', cursive;		
+		}
+
+		.flex-containers {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 2em;
+			font-family: 'Kirang Haerang', cursive;
+			margin-top: 0.75em;
+			padding-top: 2.75em;
+			padding-bottom: 4em;
+		}
+
+		.border {
+			position: sticky;
+			top: 0px;
+			border: 5px solid #111;
+			padding: 15px;
+			border-radius: 50%;
+			background: #04AA6D;
+			color: white;
+
+		}
+
+		.grid-container-mainCourse {
+			display: grid;
+			grid-template-columns: auto auto auto;
+			gap: 28em;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 4em;
+		}
+
+		.grid-item-mainCourse {
+			padding: 20px 30px;
+			text-align: center;
+			font-size: 30px;
+		}
+
+		.chole-bhature-img {
+			padding-left: 10px;
+		}
+
+		.grid-span {
+			display: inline-grid;
+			grid-template-columns: 1000px 765px;
+			gap: 2em;
+			padding-bottom: 4em;
+			padding-right: 10px;
+		}
+
+		#special-case {
+			text-align: center;
+			padding-top: 250px;
+			font-size: 30px;
+		}
+
+		.grid-container-starter {
+			display: inline-grid;
+			grid-template-columns: auto auto auto;
+			padding-left: 10px;
+			padding-right: 10px;
+			gap: 31.45em;
+			padding-bottom: 4em;
+		}
+
+		.grid-item-starter {
+			padding: 20px 30px;
+			text-align: center;
+			font-size: 30px;
+		}
+
+		.grid-mashroom-container {
+			display: inline-grid;
+			grid-template-columns: 1000px 765px;
+			gap: 2em;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 4em;
+
+		}
+
+		.price-span-grid-mashroom {
+			font-size: 30px;
+			text-align: center;
+			padding-top: 250px;
+		}
+
+		.grid-deserts-container {
+			display: inline-grid;
+			grid-template-columns: auto auto auto;
+			gap: 30.10em;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 4em;
+		}
+
+		.desert {
+			padding: 20px 30px;
+			font-size: 30px;
+			text-align: center;
+		}
+
+		.grid-turkish-delight-container {
+            display: inline-grid;
+            grid-template-columns: auto 765px;
+            gap: 2em;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 4em;
+		}
+
+		.price-grid-turkish-delight {
+			text-align: center;
+			padding-top: 250px;
+			font-size: 30px;
+		}
+
+		.grid-beverages-container {
+			display: inline-grid;
+			grid-template-columns: auto auto auto;
+			font-size: 30px;
+			padding-left: 10px;
+			padding-right: 10px;
+			gap: 21.25em;
+			padding-bottom: 4em;
+
+
+		}
+		
+		.beverages {
+			text-align: center;
+			padding: 20px 30px;
+		}
+
+		.grid-mojito-container {
+			display: inline-grid;
+			grid-template-columns: auto 765px;
+			padding-left: 10px;
+			gap: 2em;
+			padding-right: 10px;
+			padding-bottom: 12em;
+		}
+
+		.price-grid-mojito {
+			font-size: 30px;
+			padding-top: 250px;
+			text-align: center;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+			margin: 0px 0px 4em 0em;
+			padding: 0px 5px 0px 5px;
+			display: block;
+		}
+
+		li a {
+			font-family: 'Kirang Haerang', cursive;
+			float: left;
+			text-decoration: none;
+			font-size: 25px;
+			padding: 14px 16px;
+			letter-spacing: 2px;
+		}
+
+		li a:hover {
+		}
+
+		.active {
+			background-color: #04AA6D;
+		}
+
+		.footer-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding:  200px;
+			background-color: black;
+			border: 5px solid black;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+
+		}
+
+		.fa {
+			padding: 20px;
+			font-size: 5em;
+			text-decoration: none;
+			text-align: center;
+			width: 35px;
+			margin: 2px 5px;
+			border-radius: 5px;
+		}
+
+		.fa:hover {
+			opacity: 0.70;
+		}
+
+		.fa-facebook {
+			background-color: #4267B2;
+			color: white;
+		}
+
+		.fa-twitter {
+			background-color: white;
+			color: #1DA1F2;
+		}
+
+		.fa-youtube {
+			background-color: #FF0000;
+			color: white;
+		}
+
+		.fa-pinterest {
+			background-color: #E60023;
+			color: white;
+		}
+
+		.right-border {
+			border-right: 1px solid #111;
+		}
+
+		.grid-item-mainCourse, #special-case, .grid-item-starter, .price-span-grid-mashroom, .desert, .price-grid-turkish-delight, .price-grid-turkish-delight, .beverages, .price-grid-mojito, li a {
+			color: #111;
+		}
+
+		.flex-containers, .grid-item-mainCourse, #special-case, .grid-item-starter, .price-span-grid-mashroom, .desert, .price-grid-turkish-delight, .beverages, .price-grid-mojito, ul, li a:hover {
+			background-color: white;
+		}
+		
+		.grid-item-mainCourse, .grid-item-starter, .desert, .beverages {
+			background-color: #04AA6D;
+		}
+
+		.grid-item-mainCourse:hover, .grid-item-starter:hover, .desert:hover, .beverages:hover {
+			color: white;
+			opacity: 0.7;
+		}
+
+		#special-case, .price-span-grid-mashroom, .price-grid-turkish-delight, .price-grid-mojito {
+			background-color: #04AA6D;
+		}
+
+		ul {
+			background-color: black;
+		}
+
+		li a {
+			background-color: white;
+		}
+
+		.grid-span-item1:hover {
+		opacity: 0.7;
+		}
+
+		.img-span-grid-mashroom:hover {
+			opacity: 0.7;
+		}
+
+		.img-grid-turkish-delight:hover {
+			opacity: 0.7;
+		}
+
+		.img-grid-mojito:hover {
+			opacity: 0.7;
+		}
+
+
+
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kirang+Haerang&family=Montserrat:wght@500&family=Open+Sans&family=Roboto+Mono:wght@500&family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kirang+Haerang&family=Montserrat:wght@500&family=Open+Sans&family=Roboto+Mono:wght@500&family=Roboto:wght@500&display=swap" rel="stylesheet">   
+</head>
+<body>
+	<header>
+		<div class="flex-containers">
+			<div class="border">Gusteau's</div>
+		</div>
+		<div class="navbar-styling">
+			<ul>
+				<li><a class="right-border active" href="#home">Home</a></li>
+				<li><a class="right-border" href="#news">News</a></li>
+				<li><a class="right-border" href="#Contact">Contact</a></li>
+				<li><a style="float: right;" href="#About">About</a></li>
+			</ul>
+		</div>
+		<hr>
+	</header>
+	<main>
+		<div class="grid-container-mainCourse">
+			<div class="grid-item-mainCourse">Chole bhature</div>
+			<div class="grid-item-mainCourse">Rajma chawal</div>
+			<div class="grid-item-mainCourse">Soya chaap</div>
+		</div>
+		<span class="grid-span chole-bhature-img">
+			<span class="grid-span-item grid-span-item1">
+				<img src="https://travel.fropky.com/Images/2020/aug/Punjabi/Punjabi_05.jpg" width="1000px">
+			</span>
+			<span class="grid-span-item" id="special-case">
+				USD - $16.77
+			</span>
+		</span>
+		<div class="grid-container-starter">
+			<div class="grid-item-starter">Gol gappe</div>
+			<div class="grid-item-starter">Dahi bhale</div>
+			<div class="grid-item-starter">Mushroom</div>
+		</div>
+		<span class="grid-mashroom-container">
+			<span class="img-span-grid-mashroom">
+				<img src="https://kfoods.com/articles/images/10-12-2019-07-09-27shutterstock_332327798.jpg" width="1000px" height="500px" >
+			</span>
+			<span class="price-span-grid-mashroom">
+				USD - $36.77
+			</span>
+		</span>
+		<div class="grid-deserts-container">
+			<div class="desert">Turkish Delight</div>
+			<div class="desert">Brownie</div>
+			<div class="desert">Tarte Tatin</div>
+		</div>
+		<div class="grid-turkish-delight-container">
+			<div class="img-grid-turkish-delight">
+				<img src="https://blog.radissonblu.com/wp-content/uploads/2016/02/A-plate-of-colorful-Turkish-delight-Lokum.jpg" width="1000px" height="500px">
+			</div>
+			<div class="price-grid-turkish-delight">
+				USD - $49.99
+			</div>
+		</div>
+		<div class="grid-beverages-container">
+			<div class="beverages">Tea</div>
+			<div class="beverages">Cappuccino</div>
+			<div class="beverages">Mojito</div>
+		</div>
+		<div class="grid-mojito-container">
+			<div class="img-grid-mojito">
+				<img src="https://lh3.googleusercontent.com/I9kagFu26Q55aQz_Ph9HellUeM0tPQqaUqrjqLN6RFWxHmzZvKa2dNbFeM-zdAR2TRSTknlfgtq_XvtCGYUBqwTKMjM=w1000" width="1000px" height="500px">
+			</div>
+			<div class="price-grid-mojito">
+				USD - $10.95
+			</div>
+		</div>
+	</main>
+	<footer>
+		<hr><hr>
+		<div class="footer-position footer-container">
+			<div><a class="fa fa-facebook" href="#"></a></div>
+			<div><a class="fa fa-twitter" href="#"></a></div>	
+			<div><a class="fa fa-youtube" href="#"></a></div>
+			<div><a class="fa fa-pinterest" href="#"></a></div>	
+		</div>
+	</footer>
+
+
+
+</body>
+</html>
